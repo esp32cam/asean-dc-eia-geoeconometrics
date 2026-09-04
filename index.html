@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ASEAN-10 Data-Centre EIA / EIS — Geo-Economic &amp; Econometric Proof-of-Concept</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --card:#ffffff; --ink:#111827; --muted:#5b6473; --line:#e3e6ec;
+    --accent:#1d4ed8; --accentInk:#ffffff; --warn:#b45309; --good:#047857;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0f1420; --card:#161c2b; --ink:#e8ebf2; --muted:#9aa4b8; --line:#26304a;
+           --accent:#60a5fa; --accentInk:#0b1220; --warn:#fbbf24; --good:#34d399; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans Thai",sans-serif;}
+  .wrap{max-width:1000px;margin:0 auto;padding:28px 18px 72px}
+  header{margin-bottom:26px}
+  h1{font-size:clamp(22px,4.4vw,34px);line-height:1.22;margin:0 0 10px;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:clamp(14px,2.6vw,17px);margin:0 0 14px}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+  .tag{font-size:12px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--card)}
+  h2{font-size:clamp(17px,3vw,22px);margin:34px 0 12px;letter-spacing:-.01em}
+  .cards{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:720px){ .cards{grid-template-columns:1fr 1fr} }
+  .card{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
+        padding:18px 18px 16px;text-decoration:none;color:inherit;transition:transform .12s ease, box-shadow .12s ease}
+  a.card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.09)}
+  .card h3{margin:0 0 6px;font-size:17px}
+  .card p{margin:0;color:var(--muted);font-size:14px}
+  .card .go{display:inline-block;margin-top:12px;font-size:13px;font-weight:600;color:var(--accent)}
+  .badge{display:inline-block;background:var(--accent);color:var(--accentInk);font-size:11px;font-weight:700;
+         padding:3px 8px;border-radius:6px;margin-bottom:9px;letter-spacing:.02em}
+  table{width:100%;border-collapse:collapse;font-size:14px;background:var(--card);
+        border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:rgba(127,127,127,.07);font-weight:650;white-space:nowrap}
+  tr:last-child td{border-bottom:none}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  ul{padding-left:20px;margin:10px 0}
+  li{margin:7px 0}
+  .note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--warn);
+        border-radius:10px;padding:14px 16px;font-size:14px;color:var(--muted)}
+  .note strong{color:var(--ink)}
+  code{background:rgba(127,127,127,.13);padding:2px 6px;border-radius:5px;font-size:13px;
+       font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+  a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Environmental &amp; Climate Risk for Data Centres in ASEAN-10</h1>
+  <p class="sub">A geo-economic and econometric proof-of-concept for improving EIA / EIS screening, built on alternative data and validated against a known ground truth.</p>
+  <div class="tags">
+    <span class="tag">Thailand NEQA · EIA · EHIA</span>
+    <span class="tag">Philippines PD 1586 EIS</span>
+    <span class="tag">Heckman / MNAR correction</span>
+    <span class="tag">Spatial econometrics</span>
+    <span class="tag">PCAF data quality</span>
+    <span class="tag">Interactive maps</span>
+  </div>
+</header>
+
+<h2>Open the two interactive pages</h2>
+<div class="cards">
+  <a class="card" href="./map.html">
+    <span class="badge">INTERACTIVE MAP</span>
+    <h3>ASEAN data-centre risk map</h3>
+    <p>Multi-layer map: regulatory capture choropleth, ~290 facilities coloured by screening tier with full legal-trigger pop-ups, basin water stress, flood expected annual damage, hub estimates and a CO<sub>2</sub> heat-map. Layers toggle from the control at the top right.</p>
+    <span class="go">Open the map &rarr;</span>
+  </a>
+  <a class="card" href="./notebook.html">
+    <span class="badge">FULL ANALYSIS</span>
+    <h3>Executed notebook, all 22 figures</h3>
+    <p>The complete pipeline as it ran: legal framework as data, bottom-up Monte Carlo, coverage correction, partial pooling, missing-data machinery, spatial econometrics, scenario overlays, validation and the EIA screening frontier.</p>
+    <span class="go">Read the analysis &rarr;</span>
+  </a>
+</div>
+
+<h2>What the run showed</h2>
+<div class="scroll">
+<table>
+  <thead><tr><th>Question</th><th>Result from the run</th></tr></thead>
+  <tbody>
+    <tr><td>Does non-random disclosure bias portfolio totals?</td>
+        <td>Yes. Disclosers' true average PUE was 1.34 against 1.54 for non-disclosers. Applying the disclosed average understated portfolio CO<sub>2</sub> by 5.1 percent.</td></tr>
+    <tr><td>Can the bias be corrected without disclosure?</td>
+        <td>Partly by weighting, better by selection correction. Inverse-probability weighting left 4.0 percent bias, the Heckman two-step 2.7 percent, and the engineering prior with Monte Carlo 1.2 percent.</td></tr>
+    <tr><td>Are the uncertainty bands honest?</td>
+        <td>Broadly. On 47 facilities that began disclosing after the estimate, nominal 90 percent intervals achieved 77 to 83 percent coverage depending on the method.</td></tr>
+    <tr><td>Is the footprint spatially clustered?</td>
+        <td>Yes. Facility-level Moran's I on estimated CO<sub>2</sub> was +0.28 with a permutation p-value of 0.001, so national thresholds leak across borders.</td></tr>
+    <tr><td>Does the policy design recover known effects?</td>
+        <td>Yes. Difference-in-differences recovered the planted Singapore moratorium, Johor spillover and Johor vetting effects almost exactly.</td></tr>
+    <tr><td>How much load do today's rules actually capture?</td>
+        <td>A full assessment covers 20 percent of projects but only 26 percent of estimated CO<sub>2</sub> and 25 percent of water.</td></tr>
+    <tr><td>Could a resource-based rule do better?</td>
+        <td>Yes. A threshold of "IT load at least 20 MW <em>or</em> water use at least 300 m³/day" captured 84 percent of CO<sub>2</sub> and 93 percent of water.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Run it yourself</h2>
+<ul>
+  <li><a href="./ASEAN_DC_EIA_GeoEconometrics.ipynb">Download the notebook</a>, then upload it to <a href="https://colab.research.google.com/">Google Colab</a> and choose Runtime, Run all. It installs what is missing and finishes in under a minute.</li>
+  <li>Data exports from the run: <a href="./outputs/facility_estimates_and_screening.csv">facility estimates and screening</a>, <a href="./outputs/hub_level_estimates.csv">hub-level estimates</a>, <a href="./outputs/asean10_legal_framework.csv">ASEAN-10 legal framework</a>, <a href="./outputs/threshold_frontier.csv">threshold frontier</a>, <a href="./outputs/validation_metrics.csv">validation metrics</a>.</li>
+  <li>To use real data, fill <a href="./outputs/REAL_DATA_TEMPLATE.csv">the template</a> with investment-board, industrial-estate and market-database rows plus Aqueduct water stress, Fathom flood depth and Ember grid factors, then load it in section 3 in place of the synthetic register.</li>
+</ul>
+
+<h2>Read this before quoting any number</h2>
+<div class="note">
+  <p style="margin:0 0 9px"><strong>The facility data are illustrative, not a real register.</strong> Hub coordinates and hub context are anchored to the real world, but every facility and its attributes are generated so that estimators can be scored against a known truth. Country grid factors, tariffs, carbon-price paths and the non-Thai screening thresholds are labelled placeholders.</p>
+  <p style="margin:0 0 9px"><strong>Legal status is mid-August 2026</strong>, including the Thai Prime Minister's Office Regulation on the Data Center Business Policy Committee B.E. 2569 published in the Royal Gazette on 13 August 2026. Rules that could not be confirmed are flagged <code>UNVERIFIED</code> in the screening engine rather than guessed. These are the applicability of the planning-office building threshold to a pure data-centre building, whether standby generators count toward the Factory Act horsepower test, and the volumetric thresholds for water and groundwater licences.</p>
+  <p style="margin:0"><strong>One statistical caveat.</strong> The Heckman selection term is correctly signed but not statistically significant at this sample size, which is what disclosure samples of roughly a hundred facilities typically deliver in the region.</p>
+</div>
+
+<footer>
+  Built with Claude Code. Source and full method notes are in the <a href="https://github.com/esp32cam/asean-dc-eia-geoeconometrics">repository</a>.
+</footer>
+
+</div>
+</body>
+</html>

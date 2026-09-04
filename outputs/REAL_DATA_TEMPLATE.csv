@@ -1,0 +1,1 @@
+fac_id,country_iso3,hub,lat,lon,ftype,cooling,operator,parent_reports_cdp,year_online,it_mw,floor_area_m2,in_industrial_estate,onsite_thermal_mw,onsite_solar_mwp,boi_promoted,water_source,pue_reported,wue_reported,util_reported,water_stress_aqueduct,flood100_m_fathom,grid_ef_tco2_mwh,nightlight_rad_viirs,thermal_anom_k,footprint_m2,marketdb_mw,permits_count,job_posts
