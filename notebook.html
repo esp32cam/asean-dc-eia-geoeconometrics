@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head><meta charset="utf-8"/>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>executed</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
@@ -7813,7 +7814,7 @@ body{ -webkit-text-size-adjust:100%; }
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="ASEAN-10-Data-Centre-Environmental-&amp;-Climate-Risk-%E2%80%94-Geo-Economic-+-Econometric-Proof-of-Concept-for-EIA-/-EIS-Screening">ASEAN-10 Data-Centre Environmental &amp; Climate Risk — Geo-Economic + Econometric Proof-of-Concept for EIA / EIS Screening<a class="anchor-link" href="#ASEAN-10-Data-Centre-Environmental-&amp;-Climate-Risk-%E2%80%94-Geo-Economic-+-Econometric-Proof-of-Concept-for-EIA-/-EIS-Screening">¶</a></h1><p><a href="https://colab.research.google.com/"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a></p>
+<h1 id="ASEAN-10-Data-Centre-Environmental-&amp;-Climate-Risk-%E2%80%94-Geo-Economic-+-Econometric-Proof-of-Concept-for-EIA-/-EIS-Screening">ASEAN-10 Data-Centre Environmental &amp; Climate Risk — Geo-Economic + Econometric Proof-of-Concept for EIA / EIS Screening<a class="anchor-link" href="#ASEAN-10-Data-Centre-Environmental-&amp;-Climate-Risk-%E2%80%94-Geo-Economic-+-Econometric-Proof-of-Concept-for-EIA-/-EIS-Screening">¶</a></h1><p><a href="https://colab.research.google.com/github/esp32cam/asean-dc-eia-geoeconometrics/blob/main/ASEAN_DC_EIA_GeoEconometrics.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a></p>
 <p><strong>What this notebook proves.</strong> ASEAN environmental-assessment regimes (Thailand NEQA / EIA / EHIA, Philippines PD 1586 <em>EIS System</em>, Malaysia EIA Order 2015, Indonesia AMDAL, Vietnam ĐTM, ...) almost never list a data centre as a scheduled project. Facility-level PUE / WUE / energy / water are undisclosed for most ASEAN sites. This notebook shows, end-to-end and with known ground truth, that a <strong>geo-economic + econometric pipeline built on alternative data</strong> can (i) recover portfolio-level energy, carbon and water exposure without facility disclosure, (ii) quantify and <em>correct</em> the bias created by non-random (MNAR) disclosure, (iii) produce calibrated uncertainty, and (iv) turn that into a <strong>resource-based EIA/EIS screening tier</strong> that captures far more environmental load per assessed project than today's indirect triggers.</p>
 <p><strong>How it proves it.</strong> We generate an <em>illustrative</em> register of about 290 facilities across 22 real ASEAN data-centre hubs (real coordinates, real hub-level water-stress / flood / grid context, illustrative facility attributes) with <strong>latent true</strong> PUE, utilisation, WUE, energy, carbon and water. A realistic MNAR disclosure mechanism hides most of the truth (greener, larger, multinational operators disclose more). Every estimator is then scored <strong>against the hidden truth</strong>. Swap the synthetic register for real BOI / IEAT / market-database rows (template exported at the end) and every downstream cell keeps working.</p>
 <p><strong>Pipeline (each section is runnable on its own after §1–§3):</strong></p>
